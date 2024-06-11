@@ -8,8 +8,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@SequenceGenerator(name = "default_gen", sequenceName = "articulo_id_seq" , allocationSize = 1)
-@Table(name = "articulo")
+@SequenceGenerator(name = "default_gen", sequenceName = "articulos_id_seq" , allocationSize = 1)
+@Table(name = "tb_articulos")
 public class Articulo {
 
     @Id

@@ -4,24 +4,24 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.sql.Date;
-
 
 @Getter
 @Setter
 @Entity
-@SequenceGenerator(name = "default_gen", sequenceName = "ordenes_id_seq" , allocationSize = 1)
-@Table(name = "tb_ordenes")
-public class Orden {
+@SequenceGenerator(name = "default_gen", sequenceName = "orden_articulo_id_seq", allocationSize = 1)
+@Table(name = "tb_orden_articulo")
+public class OrdenArticulo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "default_gen")
     @Basic(optional = false)
     @Column(name = "id")
     private Long id;
-    private String codigo;
-    @Column(name = "cliente_id")
-    private Long clienteId;
-    private Date fecha;
+    @Column(name = "orden_id")
+    private Long ordenId;
 
+    @Column(name = "articulo_id")
+    private Long articuloId;
+
+    private Long cantidad;
 }
