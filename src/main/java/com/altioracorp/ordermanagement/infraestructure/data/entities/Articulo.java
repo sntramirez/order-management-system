@@ -20,5 +20,6 @@ public class Articulo {
 
     private String codigo;
     private String nombre;
+    private Integer stock;
     private double precioUnitario;
 }
